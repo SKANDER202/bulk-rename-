@@ -45,8 +45,17 @@
       "dist-electron/**/*"
     ],
     "win": {
-      "target": [{"target": "portable", "arch": ["x64"]}],
+      "target": [
+        {"target": "nsis", "arch": ["x64"]}
+      ],
       "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Bulk Rename Modern"
     },
     "mac": {
       "target": ["dmg"],
